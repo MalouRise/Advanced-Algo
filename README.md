@@ -7,8 +7,9 @@ It performs these operations:
 -If a larger sum is found, we update the maximum sum and the indices of the result.
 -At the end, we return the maximum sum and the corresponding indices
 
-Here is an example of how to use the brute_force_maximum_segment_sum_2d function:
 **Exemple d'utilisation**
+Here is an example of how to use the brute_force_maximum_segment_sum_2d function:
+
 ```python
 arr = np.array([[1, 2, -1, -4, -20],
                 [-8, -3, 4, 2, 1],
