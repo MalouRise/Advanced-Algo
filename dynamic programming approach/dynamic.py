@@ -1,19 +1,20 @@
 def max_subarray_2d(matrix):
     M, N = len(matrix), len(matrix[0])
-    dp = [[0] * N for _ in range(M)]
+    # Initialize the global maximum sum to a very small number
+    max_sum = float('-inf')
 
-    # Initialize the first column of the dynamic programming matrix.
-    for i in range(M):
-        dp[i][0] = matrix[i][0]
+    # Iterate over each column of the matrix
+    for j in range(N):
+        # Initialize the current column sum to zero
+        current_sum = 0
 
-    # Calculate the maximum subarray sum iteratively.
-    for j in range(1, N):
+        # Iterate over each row of the matrix
         for i in range(M):
-            # The maximum subarray sum ending at (i, j) depends on the previous column (j-1).
-            dp[i][j] = max(dp[i][j-1] + matrix[i][j], matrix[i][j])
-
-    # Find the global solution by selecting the maximum value from the last column of dp.
-    max_sum = max(dp[i][N-1] for i in range(M))
+            # Update the current sum by taking the maximum between the extension of the previous subarray and the current element
+            current_sum = max(current_sum + matrix[i][j], matrix[i][j])
+            
+            # Update the global maximum sum
+            max_sum = max(max_sum, current_sum)
 
     return max_sum
 
