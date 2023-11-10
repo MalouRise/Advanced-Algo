@@ -34,7 +34,7 @@ matrice_A = [
 ]
 
 maximum, (debut, x, z, y) = greedy(matrice_A)
-print("Somme maximale : ", maximum)
+print("Max sum : ", maximum)
 
 
 sousMatrice = []

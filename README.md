@@ -1,2 +1,8 @@
-Pour cette algorithme j'ai d'abord initialiser les variables dont j'avais besoin puis j'ai parcouru la matrice en comparant les differents sommes entre elles afin de ne garder que la somme la plus importante 
-Puis j'ai effectué un affichage de la somme ainsi que de la sous-matrice
+For this algorithm I first initialize 2 variables to represent the maximum sum and the submatrix we want at the end (initially empty)
+
+Then I use loops and a temporary sum that run through the matrix 
+I tracked the start and the end of te submatrix
+
+Finally I print the result sum and the corresponding submatrix
+
+For this algorithm the time complexity is O(n^3) but I think it is optimizable.
