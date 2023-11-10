@@ -8,6 +8,7 @@ It performs these operations:
 -At the end, we return the maximum sum and the corresponding indices
 
 **Exemple d'utilisation**
+
 Here is an example of how to use the brute_force_maximum_segment_sum_2d function:
 
 ```python
