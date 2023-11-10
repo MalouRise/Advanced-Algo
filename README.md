@@ -1,7 +1,7 @@
 # Advanced-Algo
 This brute-force algorithm systematically explores all possible submatrices to find the maximum sum submatrix.
 It performs these operations:
-1. We initialize the maximum sum to minus infinity and the indices of the result to None.
+1.**Initialize** We initialize the maximum sum to minus infinity and the indices of the result to None.
 2. -We use nested loops to traverse all possible indices of i1, i2, j1, and j2.
 -For each combination of indices, we calculate the sum of the corresponding submatrix using the NumPy library.
 -If a larger sum is found, we update the maximum sum and the indices of the result.
