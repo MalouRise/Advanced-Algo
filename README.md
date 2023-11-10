@@ -6,7 +6,7 @@ It performs these operations:
 
 2.**Loop** : We use nested loops to traverse all possible indices of i1, i2, j1, and j2.
 
-3.**Calculate** : For each combination of indices, we calculate the sum of the corresponding submatrix using the NumPy library.
+3.**Calculate** : For each combination of indices, we calculate the sum of the corresponding submatrix.
 
 4.**Update** : If a larger sum is found, we update the maximum sum and the indices of the result.
 
