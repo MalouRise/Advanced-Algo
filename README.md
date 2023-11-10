@@ -8,13 +8,17 @@ It performs these operations:
 -At the end, we return the maximum sum and the corresponding indices
 
 Here is an example of how to use the brute_force_maximum_segment_sum_2d function:
-# Exemple d'utilisation
+**Exemple d'utilisation**
+```python
 arr = np.array([[1, 2, -1, -4, -20],
                 [-8, -3, 4, 2, 1],
                 [3, 8, 10, 1, 3],
                 [-4, -1, 1, 7, -6]])
+```
 
-# Appel de la fonction pour la forme non contrainte
+**Appel de la fonction pour la forme non contrainte**
+```python
 max_sum, result = brute_force_maximum_segment_sum_2d(arr)
 print(f"Maximum Sum: {max_sum}")
 print(f"Indices: {result}")
+```
