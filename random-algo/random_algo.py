@@ -1,23 +1,26 @@
-def generer_nombre_aleatoire(seed):
-    """Génère un nombre pseudo-aléatoire basé sur la graine (seed)."""
-    hash_entier = hash(seed)
-    nombre_aleatoire = (hash_entier % 1000) / 1000.0  # Normalisez entre 0 et 1
-    return nombre_aleatoire
+import random
 
-def algorithme_aleatoire(taille_sequence, graine):
-    sequence = []
+matrix = [
+    [1, 2, -1, -4, -20],
+    [-8, -3, 4, 2, 1],
+    [3, 8, 10, 1, 3],
+    [-4, -1, 1, 7, -6]
+]
 
-    for _ in range(taille_sequence):
-        nombre_aleatoire = generer_nombre_aleatoire(graine)
-        sequence.append(nombre_aleatoire)
-        graine += 1  # Changez la graine à chaque itération pour obtenir une séquence différente
+def extract_random_submatrix(matrix, start_row, end_row, start_col, end_col):
+ 
+    row = len(matrix)
+    col = len(matrix[1])
 
-    return sequence
+    start_row = random.randint(0, row - 1)
+    start_col = random.randint(0, col - 1)
 
-# Exemple d'utilisation avec une séquence de 10 nombres aléatoires
-taille_sequence = 10
-graine = 42  # Vous pouvez changer la graine pour obtenir une séquence différente
-sequence_aleatoire = algorithme_aleatoire(taille_sequence, graine)
-print("Séquence aléatoire:", sequence_aleatoire)
+    end_row = random.randint(start_row, row - 1)
+    end_col = random.randint(start_col, col - 1)
 
-#test
+    return [row[start_col:end_col+1] for row in matrix[start_row:end_row+1]]
+
+submatrix = extract_random_submatrix(matrix, 1, 2, 2, 3)
+
+for row in submatrix:
+    print(row)
