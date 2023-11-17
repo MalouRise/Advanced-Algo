@@ -20,3 +20,4 @@ graine = 42  # Vous pouvez changer la graine pour obtenir une séquence différent
 sequence_aleatoire = algorithme_aleatoire(taille_sequence, graine)
 print("Séquence aléatoire:", sequence_aleatoire)
 
+#test
